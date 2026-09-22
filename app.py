@@ -109,7 +109,7 @@ def init_db():
         FROM users
         WHERE username = ?
         """,
-        ("admin",)
+        ("jolo",)
     ).fetchone()
 
     if admin is None:
@@ -127,7 +127,7 @@ def init_db():
             """,
             (
                 "admin",
-                generate_password_hash("admin123"),
+                generate_password_hash("jolo123"),
                 "admin"
             )
         )
